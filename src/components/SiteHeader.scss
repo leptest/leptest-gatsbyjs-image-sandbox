@@ -1,0 +1,41 @@
+@import '../global/_variables';
+@import '../global/mixins';
+
+.site-header {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	border-top: 2px solid $orange;
+}
+
+.header-logo {
+}
+
+.header-logo__link {
+}
+
+.header-logo__image {
+}
+
+.header-logo__title {
+	@include hide-text1;
+}
+
+.wee-nav {
+	display: flex;
+
+	a {
+		padding: 14px 16px;
+		border: 1px solid $red;
+		margin: 16px;
+		background-color: $white; // Chrome Audits
+		color: $black;
+	}
+}
+
+.header__contact-us__wrapper {
+	a {
+		color: $black;
+		background-color: $white; // Chrome Audits
+	}
+}

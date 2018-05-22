@@ -1,0 +1,146 @@
+@import './font-stacks.scss';
+
+$white:							#ffffff;
+$grey:							#808080;
+$black:							#000000;
+$red:							#e6194b;
+$green:							#3cb44b;
+$yellow:						#ffe119;
+$blue:							#0082c8;
+$orange:						#f58231;
+$purple:						#911eb4;
+$cyan:							#46f0f0;
+$magenta:						#f032e6;
+$lime:							#d2f53c;
+$pink:							#fabebe;
+$teal:							#008080;
+$navy:							#000080;
+$beige:							#e1dfd5;
+
+$c-grey-1:						#eaecee;
+
+// Config vars
+
+$primary:						#005084;
+$primary-invert:				#ffffff;
+
+$body-size:						15px;
+
+$font-family-sans-serif:		-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace:			SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:				$font-family-sans-serif !default;
+
+$font-size-base:				1rem !default;
+
+$font-weight-light:				300 !default;
+$font-weight-normal:			400 !default;
+$font-weight-bold:				700 !default;
+
+$font-weight-base:				$font-weight-normal !default;
+$line-height-base:				1.5 !default;
+
+$h1-font-size:					$font-size-base * 2.5 !default;
+$h2-font-size:					$font-size-base * 2 !default;
+$h3-font-size:					$font-size-base * 1.75 !default;
+$h4-font-size:					$font-size-base * 1.5 !default;
+$h5-font-size:					$font-size-base * 1.25 !default;
+$h6-font-size:					$font-size-base !default;
+
+$headings-margin-bottom:		30px !default;
+$headings-font-family:			inherit !default;
+$headings-font-weight:			500 !default;
+$headings-line-height:			1.2 !default;
+$headings-color:				inherit !default;
+
+
+// Reboot variables
+$body-bg:						$white;
+$body-color:					$black;
+$dt-font-weight:				$font-weight-bold;
+$label-margin-bottom:			16px;
+$link-color:					$orange;
+$link-decoration:				underline;
+$link-hover-color:				$lime;
+$link-hover-decoration:			underline;
+$paragraph-margin-bottom:		16px;
+$table-caption-color:			$yellow;
+$table-cell-padding:			20px;
+
+
+/*-----------------------------------------------------------------------------
+------------------------------------- GRID ------------------------------------
+-----------------------------------------------------------------------------*/
+$responsiveColumnGutter: 32px;
+// (1300px + $responsiveColumnGutter)
+$responsiveMaxWidth: 2048px; // Need to account for the left/right 5%/10% padding
+$responsiveNumberColumns: 24;
+
+
+// Other variables
+$maxWidth: 1600px;
+$subNavSpacingForHeader: 140px;
+
+/*-----------------------------------------------------------------------------
+-------------------------------- MEDIA QUERIES --------------------------------
+-----------------------------------------------------------------------------*/
+// Small (0 - 600) - iPhone
+// Medium (601 - 900) - iPad portrait
+// Large (901 - 1200) - iPad landscape
+// XLarge (1201 - 1500) - Desktop
+// XXLarge (1501 - 1800) - Wide desktop
+// XXLarge (1801 - *) - 4k+ desktop
+
+/* MQ Screen Widths */
+$mqSmallMin:					1px;
+$mqSmallMax:					600px;
+
+$mqMediumMin:					$mqSmallMax + 1px;
+$mqMediumMax:					900px;
+
+$mqLargeMin:					$mqMediumMax + 1px;
+$mqLargeMax:					1200px;
+
+$mqXLargeMin:					$mqLargeMax + 1px;
+$mqXLargeMax:					1500px;
+
+$mqXXLargeMin:					$mqXLargeMax + 1px;
+$mqXXLargeMax:					1800px;
+
+$mqXXXLargeMin:					$mqXXLargeMax + 1px;
+$mqXXXLargeMax:					9999px;
+
+/* Media Queries */
+// http://www.paulund.co.uk/ios-media-queries-boilerplate
+// $mqSmallAndUp:		'only screen';
+// $mqSmallAndDown:		'only screen and (max-width: #{$mqSmallMax})';
+$mqSmallOnly:					'only screen and (min-width: #{$mqSmallMin}) and (max-width: #{$mqSmallMax})';
+
+$mqMediumAndUp:					'only screen and (min-width: #{$mqMediumMin})';
+$mqMediumAndDown:				'only screen and (max-width: #{$mqMediumMax})';
+$mqMediumOnly:					'only screen and (min-width: #{$mqMediumMin}) and (max-width: #{$mqMediumMax})';
+
+$mqLargeAndUp:					'only screen and (min-width: #{$mqLargeMin})';
+$mqLargeAndDown:				'only screen and (max-width: #{$mqLargeMax})';
+$mqLargeOnly:					'only screen and (min-width: #{$mqLargeMin}) and (max-width: #{$mqLargeMax})';
+
+$mqXLargeAndUp:					'only screen and (min-width: #{$mqXLargeMin})';
+$mqXLargeAndDown:				'only screen and (max-width: #{$mqXLargeMax})';
+$mqXLargeOnly:					'only screen and (min-width: #{$mqXLargeMin}) and (max-width: #{$mqXLargeMax})';
+
+$mqXXLargeAndUp:				'only screen and (min-width: #{$mqXXLargeMin})';
+$mqXXLargeAndDown:				'only screen and (max-width: #{$mqXXLargeMax})';
+$mqXXLargeOnly:					'only screen and (min-width: #{$mqXXLargeMin}) and (max-width: #{$mqXXLargeMax})';
+
+$mqXXXLargeAndUp:				'only screen and (min-width: #{$mqXXXLargeMin})';
+
+$mqHighDensity:					'only screen and (-webkit-min-device-pixel-ratio: 2)',
+	'only screen and (min--moz-device-pixel-ratio: 2)',
+	'only screen and (-o-min-device-pixel-ratio: 2/1)',
+	'only screen and (min-device-pixel-ratio: 2)',
+	'only screen and (min-resolution: 192dpi)',
+	'only screen and (min-resolution: 2dppx)';
+
+$mqLandscape:					'only screen and (orientation: landscape)';
+$mqPortrait:					'only screen and (orientation: portrait)';
+
+$mqPrint:						'only print';
