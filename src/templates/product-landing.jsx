@@ -18,11 +18,20 @@ export const ProductPageTemplate = ({
 				</header>
 
 				<p>{goodImage}</p>
-			`	<img src={goodImage} alt="description" />
+				{/* <img src={goodImage} alt="description" /> */}
 
 				{/* <p>{badImage}</p> */}
+				{/* <img
+					src={post.frontmatter.image.childImageSharp.responsiveSizes.base64}
+					width="100%"
+					data-src={post.frontmatter.image.childImageSharp.responsiveSizes.src}
+					data-srcset={post.frontmatter.image.childImageSharp.responsiveSizes.srcSet}
+					data-sizes={post.frontmatter.image.childImageSharp.responsiveSizes.sizes}
+					className="lazyload"
+					alt={post.frontmatter.title}
+				/> */}
 
-				{/* <Img src={headerImage} /> */}
+				<Img resolutions={badImage.childImageSharp.resolutions} />
 
 			</article>
 		</div>
@@ -53,8 +62,6 @@ ProductPage.propTypes = {
 
 export default ProductPage;
 
-// C:/Users/daniel/Documents/leptest-gatsbyjs-image-sandbox/src/pages/products/test-product.md absPath of file >>> MarkdownRemark
-
 export const pageQuery = graphql`
 	query ProductPageByID($id: String!) {
 		markdownRemark(id: { eq: $id }) {
@@ -66,9 +73,12 @@ export const pageQuery = graphql`
 				# badImage
 				badImage {
 					childImageSharp {
-						size {
-							src
+						resolutions(width: 50, height: 50) {
+							...GatsbyImageSharpResolutions_noBase64
 						}
+						# sizes(maxWidth: 630) {
+						# 	...GatsbyImageSharpSizes
+						# }
 					}
 				}
 			}
