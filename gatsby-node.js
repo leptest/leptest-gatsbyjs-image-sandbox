@@ -41,8 +41,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 	});
 };
 
+const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 	const { createNodeField } = boundActionCreators;
+
+	fmImagesToRelative(node);
 
 	if (node.internal.type === 'MarkdownRemark') {
 		const value = createFilePath({ node, getNode });

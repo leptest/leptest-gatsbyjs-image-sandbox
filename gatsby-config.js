@@ -17,6 +17,7 @@ module.exports = {
 				name: 'pages',
 			},
 		},
+		// https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-filesystem
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
