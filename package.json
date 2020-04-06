@@ -35,7 +35,7 @@
     "react-markdown": "4.3.1"
   },
   "devDependencies": {
-    "@leptest/eslint-config-leptest": "1.0.1",
+    "@leptest/eslint-config-leptest": "1.0.4",
     "immutable": "3.8.2",
     "slate": "0.57.1"
   },
