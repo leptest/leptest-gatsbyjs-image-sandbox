@@ -37,7 +37,7 @@
   "devDependencies": {
     "@leptest/eslint-config-leptest": "1.0.1",
     "immutable": "3.8.2",
-    "slate": "0.57.1"
+    "slate": "0.58.1"
   },
   "browserslist": [
     "last 2 versions",
