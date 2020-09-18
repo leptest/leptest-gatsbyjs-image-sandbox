@@ -1,3 +1,6 @@
 {
-  "extends": ["@leptest/eslint-config-leptest"]
+  "extends": ["@leptest/eslint-config-leptest"],
+  "rules": {
+    "linebreak-style": [2, "windows"]
+  }
 }

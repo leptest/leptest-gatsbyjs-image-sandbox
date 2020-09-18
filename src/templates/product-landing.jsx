@@ -1,27 +1,26 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 export const ProductPageTemplate = ({
 	title,
 	goodImage,
 	badImage,
-}) => {
-	return (
-		<div className="container-fluid">
-			<article className="">
-				<Helmet title={`Product | ${title}`} />
+}) => (
+	<div className="container-fluid">
+		<article className="">
+			<Helmet title={`Product | ${title}`} />
 
-				<header>
-					<h1 className="">{title}</h1>
-				</header>
+			<header>
+				<h1 className="">{title}</h1>
+			</header>
 
-				<p>{goodImage}</p>
-				{/* <img src={goodImage} alt="description" /> */}
+			<p>{goodImage}</p>
+			{/* <img src={goodImage} alt="description" /> */}
 
-				{/* <p>{badImage}</p> */}
-				{/* <img
+			{/* <p>{badImage}</p> */}
+			{/* <img
 					src={post.frontmatter.image.childImageSharp.responsiveSizes.base64}
 					width="100%"
 					data-src={post.frontmatter.image.childImageSharp.responsiveSizes.src}
@@ -31,16 +30,11 @@ export const ProductPageTemplate = ({
 					alt={post.frontmatter.title}
 				/> */}
 
-				<Img resolutions={badImage.childImageSharp.resolutions} />
+			<Img resolutions={badImage.childImageSharp.resolutions} />
 
-			</article>
-		</div>
-	);
-};
-
-ProductPageTemplate.propTypes = {
-	title: PropTypes.string,
-};
+		</article>
+	</div>
+);
 
 const ProductPage = ({ data }) => {
 	const post = data.markdownRemark;
@@ -54,12 +48,6 @@ const ProductPage = ({ data }) => {
 		/>
 	);
 };
-ProductPage.propTypes = {
-	data: PropTypes.shape({
-		markdownRemark: PropTypes.object,
-	}),
-};
-
 export default ProductPage;
 
 export const pageQuery = graphql`
