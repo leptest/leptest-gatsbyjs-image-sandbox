@@ -22,7 +22,7 @@
     "gatsby-link": "2.4.14",
     "gatsby-plugin-react-helmet": "3.3.11",
     "gatsby-plugin-sass": "2.3.13",
-    "gatsby-plugin-sharp": "2.6.36",
+    "gatsby-plugin-sharp": "2.8.0",
     "gatsby-remark-images": "3.3.30",
     "gatsby-remark-relative-images": "0.3.0",
     "gatsby-source-filesystem": "2.3.30",
