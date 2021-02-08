@@ -16,7 +16,7 @@
     "eslint-fix": "eslint --ext .jsx,.js --fix ."
   },
   "dependencies": {
-    "@types/react": "16.14.0",
+    "@types/react": "17.0.1",
     "create-react-class": "15.7.0",
     "gatsby": "2.27.0",
     "gatsby-image": "2.6.0",
