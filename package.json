@@ -39,7 +39,7 @@
     "webpack": "4.44.2"
   },
   "devDependencies": {
-    "@leptest/eslint-config-leptest": "1.0.8",
+    "@leptest/eslint-config-leptest": "2.2.0",
     "immutable": "3.8.2",
     "slate": "0.59.0"
   },
